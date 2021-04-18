@@ -78,7 +78,7 @@ func (peer *Peer) Handshake() error {
 func (peer *Peer) HandshakeApprove(approved bool) error {
 
 	rsp := &sessionResponse{
-		PeerID:   peer.session.URL.Topic,
+		PeerID:   peer.peerID,
 		PeerMeta: peer.peerInfo,
 		ChainID:  peer.chainID,
 		Approved: approved,
